@@ -1,0 +1,24 @@
+{
+  "name": "dockerwebpacksii",
+  "version": "1.0.0",
+  "description": "SII training - 30-03-2019 - Docker + Webpack",
+  "main": "app.js",
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "dev": "webpack",
+    "build": "webpack --mode: production"
+  },
+  "author": "Sii+LucasM",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "css-loader": "latest",
+    "style-loader": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "html-webpack-plugin": "latest",
+    "webpack-visualizer-plugin": "latest"
+  }
+}
