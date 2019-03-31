@@ -5,6 +5,9 @@ const Visualize = require('webpack-visualizer-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  watchOptions: {
+    poll: true // watch file changes from other machines (Webpack is on VB an it watch local)
+  },
   entry: {
     bundle: './src/app.ts'
   },

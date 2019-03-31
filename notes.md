@@ -34,4 +34,8 @@ In ES6 we can use import / export / export default (new syntax)
 
 # Containerization
 
-- only a kernel of OS on your host
+- only a kernel of OS on your host - much faster and less resources consuming
+
+to stop:
+`docker stop CONTAINER-ID`
+

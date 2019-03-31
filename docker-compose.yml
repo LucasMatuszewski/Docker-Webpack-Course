@@ -1,0 +1,27 @@
+version: '3' # composer schema version
+services:
+  nodeschool_web: # our app / container name
+    build:
+      context: ./ #root container to start build
+      dockerfile: Dockerfile #file with commands to build container
+    ports:
+      - '8080:9000' #map port 8080 to 9000. We use "-" because we can list more ports.
+    volumes:
+      - './src:/usr/src/app/src' #watch changes on local folder and map (:) to VB folder (automatically copy files)
+
+    stdin_open: true
+    tty: true
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASWORD: 'password'
+      MYSQL_ROOT_PASWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+# to run docker-compose.yml we needs Docker Compose installed, and run:
+# docer-compose build
